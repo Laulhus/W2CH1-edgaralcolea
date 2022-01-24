@@ -1,0 +1,36 @@
+import Personaje from "./Personaje.js";
+import Luchador from "./Luchador.js";
+
+export default class Escudero extends Personaje {
+  sirveA;
+  pelotismo;
+  emoji = "&#128737";
+  constructor(
+    nombreEscudero,
+    familiaEscudero,
+    edadEscudero,
+    valorPelotismo,
+    personajeSirve
+  ) {
+    super(nombreEscudero, familiaEscudero, edadEscudero);
+    this.pelotismo = this.filtrarPelotismo(valorPelotismo);
+    if (personajeSirve instanceof Luchador) {
+      this.sirveA = personajeSirve;
+    }
+    this.setEmoji(this.emoji);
+  }
+
+  filtrarPelotismo(gradoPelotismo) {
+    if (gradoPelotismo < 0) {
+      return 0;
+    }
+    if (gradoPelotismo > 10) {
+      return 10;
+    }
+    return gradoPelotismo;
+  }
+
+  comunicar() {
+    return `${super.comunicar()}Soy un loser`;
+  }
+}
