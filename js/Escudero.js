@@ -1,4 +1,5 @@
-import Personaje from "./Personaje";
+import Personaje from "./Personaje.js";
+import Luchador from "./Luchador.js";
 
 export default class Escudero extends Personaje {
   sirveA;

@@ -18,5 +18,6 @@ module.exports = {
       "always",
       { exceptAfterSingleLine: true },
     ],
+    "import/extensions": "off",
   },
 };
