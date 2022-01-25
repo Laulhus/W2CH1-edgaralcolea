@@ -1,19 +1,25 @@
 import Component from "./Component.js";
 
 export default class Card extends Component {
-  imageUrl;
-
-  constructor(parentElement, className) {
+  nombre;
+  familia;
+  edad;
+  emoji;
+  constructor(parentElement, className, character) {
     super(parentElement, className, "div");
+    this.nombre = character.nombre;
+    this.familia = character.familia;
+    this.edad = character.edad;
+    this.emoji = character.emoji;
     this.generateHTML();
   }
 
   generateHTML() {
     this.element.innerHTML = `<div class="card-body">
-              <h2 class="character__name card-title h4">Nombre y familia</h2>
+              <h2 class="character__name card-title h4">${this.nombre} ${this.familia}</h2>
               <div class="character__info">
                 <ul class="list-unstyled">
-                  <li>Edad: X años</li>
+                  <li>Edad: ${this.edad} años</li>
                   <li>
                     Estado:
                     <i class="fas fa-thumbs-down"></i>
@@ -36,7 +42,7 @@ export default class Card extends Component {
                 </div>
               </div>
             </div>
-            <i class="emoji"></i>
+            <i class="emoji">${this.emoji}</i>
           </div>`;
   }
 }

@@ -4,7 +4,6 @@ export default class Personaje {
   edad;
   vivo = true;
   serie = "Juego de Tronos";
-  emoji;
 
   constructor(nombrePersonaje, familiaPersonaje, edadPersonaje) {
     this.nombre = nombrePersonaje;

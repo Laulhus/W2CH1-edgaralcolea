@@ -3,7 +3,6 @@ import Personaje from "./Personaje.js";
 export default class Luchador extends Personaje {
   arma;
   destreza;
-  emoji = "&#128481";
   constructor(
     nombreLuchador,
     familiaLuchador,
@@ -14,7 +13,6 @@ export default class Luchador extends Personaje {
     super(nombreLuchador, familiaLuchador, edadLuchador);
     this.arma = armaLuchador;
     this.destreza = this.filtraDestreza(valorDestreza);
-    this.setEmoji(this.emoji);
   }
 
   filtraDestreza(valorDestreza) {
