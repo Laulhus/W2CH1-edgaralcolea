@@ -9,6 +9,5 @@ const daenerys = new Luchador("Daenerys", "Targaryen", 30, "Dragones", 10);
 const tyrion = new Asesor("Tyrion", "Lannister", 40, daenerys);
 const bronn = new Escudero("Bronn", "AguasNegras", 54, 0, jaime);
 
-const crearLista = (...arg) => new Array(arg);
-const listaPersonajes = crearLista(joffrey, jaime, daenerys, tyrion, bronn);
+const listaPersonajes = [joffrey, jaime, daenerys, tyrion, bronn];
 export default listaPersonajes;

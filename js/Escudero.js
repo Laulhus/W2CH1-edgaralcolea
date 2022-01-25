@@ -4,7 +4,7 @@ import Luchador from "./Luchador.js";
 export default class Escudero extends Personaje {
   sirveA;
   pelotismo;
-  emoji = "&#128737";
+
   constructor(
     nombreEscudero,
     familiaEscudero,
@@ -17,7 +17,6 @@ export default class Escudero extends Personaje {
     if (personajeSirve instanceof Luchador) {
       this.sirveA = personajeSirve;
     }
-    this.setEmoji(this.emoji);
   }
 
   filtrarPelotismo(gradoPelotismo) {
