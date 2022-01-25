@@ -1,6 +1,8 @@
 import Component from "./Component.js";
 
 export default class Card extends Component {
+  imageUrl;
+
   constructor(parentElement, className) {
     super(parentElement, className, "div");
     this.generateHTML();

@@ -12,10 +12,6 @@ export default class Personaje {
     this.edad = edadPersonaje;
   }
 
-  setEmoji(emoji) {
-    document.querySelector(".emoji").innerHTML = emoji;
-  }
-
   comunicar() {
     return `${this.nombre} dice: `;
   }

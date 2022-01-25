@@ -1,5 +1,6 @@
 import Card from "./js/components/Card.js";
 import Component from "./js/components/Component.js";
+import Image from "./js/components/Image.js";
 
 function setEmoji(character) {
   document.querySelector(".emoji").innerHTML = character.emoji;
@@ -9,6 +10,12 @@ function isDead() {
     "rotate(180deg)";
 }
 
+const joffreyImage = "img/joffrey.jpg";
 const cardRow = document.querySelector(".row");
 const cardColumn = new Component(cardRow, "character col", "li").element;
-const card = new Card(cardColumn, "card character__card");
+const card = new Card(cardColumn, "card character__card").element;
+const profile = new Image(
+  card,
+  "character__picture card-img-top",
+  joffreyImage
+);
